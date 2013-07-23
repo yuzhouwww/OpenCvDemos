@@ -16,9 +16,10 @@
 		B54A2089179ECBB8004EE1E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A2088179ECBB8004EE1E4 /* Default.png */; };
 		B54A208B179ECBB8004EE1E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A208A179ECBB8004EE1E4 /* Default@2x.png */; };
 		B54A208D179ECBB8004EE1E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A208C179ECBB8004EE1E4 /* Default-568h@2x.png */; };
-		B54A2090179ECBB8004EE1E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A208F179ECBB8004EE1E4 /* ViewController.m */; };
+		B54A2090179ECBB8004EE1E4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B54A208F179ECBB8004EE1E4 /* ViewController.mm */; };
 		B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54A2091179ECBB8004EE1E4 /* ViewController.xib */; };
 		B54A209A179ECBED004EE1E4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A2099179ECBED004EE1E4 /* opencv2.framework */; };
+		B54A209C179EDBCE004EE1E4 /* rock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B54A209B179EDBCE004EE1E4 /* rock.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +37,10 @@
 		B54A208A179ECBB8004EE1E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B54A208C179ECBB8004EE1E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B54A208E179ECBB8004EE1E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B54A208F179ECBB8004EE1E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B54A208F179ECBB8004EE1E4 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B54A2092179ECBB8004EE1E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		B54A2099179ECBED004EE1E4 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "../../Users/yuzhou/Desktop/第三方库/opencv2.framework"; sourceTree = "<group>"; };
+		B54A209B179EDBCE004EE1E4 /* rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,9 @@
 				B54A2085179ECBB8004EE1E4 /* AppDelegate.h */,
 				B54A2086179ECBB8004EE1E4 /* AppDelegate.m */,
 				B54A208E179ECBB8004EE1E4 /* ViewController.h */,
-				B54A208F179ECBB8004EE1E4 /* ViewController.m */,
+				B54A208F179ECBB8004EE1E4 /* ViewController.mm */,
 				B54A2091179ECBB8004EE1E4 /* ViewController.xib */,
+				B54A209B179EDBCE004EE1E4 /* rock.jpg */,
 				B54A207D179ECBB8004EE1E4 /* Supporting Files */,
 			);
 			path = OpenCvDemos;
@@ -167,6 +170,7 @@
 				B54A208B179ECBB8004EE1E4 /* Default@2x.png in Resources */,
 				B54A208D179ECBB8004EE1E4 /* Default-568h@2x.png in Resources */,
 				B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */,
+				B54A209C179EDBCE004EE1E4 /* rock.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +183,7 @@
 			files = (
 				B54A2083179ECBB8004EE1E4 /* main.m in Sources */,
 				B54A2087179ECBB8004EE1E4 /* AppDelegate.m in Sources */,
-				B54A2090179ECBB8004EE1E4 /* ViewController.m in Sources */,
+				B54A2090179ECBB8004EE1E4 /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
