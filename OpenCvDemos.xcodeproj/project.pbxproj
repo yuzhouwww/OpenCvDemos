@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B54A2077179ECBB8004EE1E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A2076179ECBB8004EE1E4 /* UIKit.framework */; };
+		B54A2079179ECBB8004EE1E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A2078179ECBB8004EE1E4 /* Foundation.framework */; };
+		B54A207B179ECBB8004EE1E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A207A179ECBB8004EE1E4 /* CoreGraphics.framework */; };
+		B54A2081179ECBB8004EE1E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B54A207F179ECBB8004EE1E4 /* InfoPlist.strings */; };
+		B54A2083179ECBB8004EE1E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A2082179ECBB8004EE1E4 /* main.m */; };
+		B54A2087179ECBB8004EE1E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A2086179ECBB8004EE1E4 /* AppDelegate.m */; };
+		B54A2089179ECBB8004EE1E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A2088179ECBB8004EE1E4 /* Default.png */; };
+		B54A208B179ECBB8004EE1E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A208A179ECBB8004EE1E4 /* Default@2x.png */; };
+		B54A208D179ECBB8004EE1E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A208C179ECBB8004EE1E4 /* Default-568h@2x.png */; };
+		B54A2090179ECBB8004EE1E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A208F179ECBB8004EE1E4 /* ViewController.m */; };
+		B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54A2091179ECBB8004EE1E4 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B54A2073179ECBB8004EE1E4 /* OpenCvDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCvDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B54A2076179ECBB8004EE1E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B54A2078179ECBB8004EE1E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B54A207A179ECBB8004EE1E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B54A207E179ECBB8004EE1E4 /* OpenCvDemos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenCvDemos-Info.plist"; sourceTree = "<group>"; };
+		B54A2080179ECBB8004EE1E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B54A2082179ECBB8004EE1E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B54A2084179ECBB8004EE1E4 /* OpenCvDemos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCvDemos-Prefix.pch"; sourceTree = "<group>"; };
+		B54A2085179ECBB8004EE1E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B54A2086179ECBB8004EE1E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B54A2088179ECBB8004EE1E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B54A208A179ECBB8004EE1E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B54A208C179ECBB8004EE1E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B54A208E179ECBB8004EE1E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B54A208F179ECBB8004EE1E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B54A2092179ECBB8004EE1E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B54A2070179ECBB8004EE1E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54A2077179ECBB8004EE1E4 /* UIKit.framework in Frameworks */,
+				B54A2079179ECBB8004EE1E4 /* Foundation.framework in Frameworks */,
+				B54A207B179ECBB8004EE1E4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B54A206A179ECBB7004EE1E4 = {
+			isa = PBXGroup;
+			children = (
+				B54A207C179ECBB8004EE1E4 /* OpenCvDemos */,
+				B54A2075179ECBB8004EE1E4 /* Frameworks */,
+				B54A2074179ECBB8004EE1E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B54A2074179ECBB8004EE1E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B54A2073179ECBB8004EE1E4 /* OpenCvDemos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B54A2075179ECBB8004EE1E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B54A2076179ECBB8004EE1E4 /* UIKit.framework */,
+				B54A2078179ECBB8004EE1E4 /* Foundation.framework */,
+				B54A207A179ECBB8004EE1E4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B54A207C179ECBB8004EE1E4 /* OpenCvDemos */ = {
+			isa = PBXGroup;
+			children = (
+				B54A2085179ECBB8004EE1E4 /* AppDelegate.h */,
+				B54A2086179ECBB8004EE1E4 /* AppDelegate.m */,
+				B54A208E179ECBB8004EE1E4 /* ViewController.h */,
+				B54A208F179ECBB8004EE1E4 /* ViewController.m */,
+				B54A2091179ECBB8004EE1E4 /* ViewController.xib */,
+				B54A207D179ECBB8004EE1E4 /* Supporting Files */,
+			);
+			path = OpenCvDemos;
+			sourceTree = "<group>";
+		};
+		B54A207D179ECBB8004EE1E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B54A207E179ECBB8004EE1E4 /* OpenCvDemos-Info.plist */,
+				B54A207F179ECBB8004EE1E4 /* InfoPlist.strings */,
+				B54A2082179ECBB8004EE1E4 /* main.m */,
+				B54A2084179ECBB8004EE1E4 /* OpenCvDemos-Prefix.pch */,
+				B54A2088179ECBB8004EE1E4 /* Default.png */,
+				B54A208A179ECBB8004EE1E4 /* Default@2x.png */,
+				B54A208C179ECBB8004EE1E4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B54A2072179ECBB8004EE1E4 /* OpenCvDemos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B54A2096179ECBB8004EE1E4 /* Build configuration list for PBXNativeTarget "OpenCvDemos" */;
+			buildPhases = (
+				B54A206F179ECBB8004EE1E4 /* Sources */,
+				B54A2070179ECBB8004EE1E4 /* Frameworks */,
+				B54A2071179ECBB8004EE1E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCvDemos;
+			productName = OpenCvDemos;
+			productReference = B54A2073179ECBB8004EE1E4 /* OpenCvDemos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B54A206B179ECBB7004EE1E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = wzyk;
+			};
+			buildConfigurationList = B54A206E179ECBB7004EE1E4 /* Build configuration list for PBXProject "OpenCvDemos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B54A206A179ECBB7004EE1E4;
+			productRefGroup = B54A2074179ECBB8004EE1E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B54A2072179ECBB8004EE1E4 /* OpenCvDemos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B54A2071179ECBB8004EE1E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54A2081179ECBB8004EE1E4 /* InfoPlist.strings in Resources */,
+				B54A2089179ECBB8004EE1E4 /* Default.png in Resources */,
+				B54A208B179ECBB8004EE1E4 /* Default@2x.png in Resources */,
+				B54A208D179ECBB8004EE1E4 /* Default-568h@2x.png in Resources */,
+				B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B54A206F179ECBB8004EE1E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54A2083179ECBB8004EE1E4 /* main.m in Sources */,
+				B54A2087179ECBB8004EE1E4 /* AppDelegate.m in Sources */,
+				B54A2090179ECBB8004EE1E4 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B54A207F179ECBB8004EE1E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B54A2080179ECBB8004EE1E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B54A2091179ECBB8004EE1E4 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B54A2092179ECBB8004EE1E4 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B54A2094179ECBB8004EE1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B54A2095179ECBB8004EE1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B54A2097179ECBB8004EE1E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenCvDemos/OpenCvDemos-Prefix.pch";
+				INFOPLIST_FILE = "OpenCvDemos/OpenCvDemos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B54A2098179ECBB8004EE1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenCvDemos/OpenCvDemos-Prefix.pch";
+				INFOPLIST_FILE = "OpenCvDemos/OpenCvDemos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B54A206E179ECBB7004EE1E4 /* Build configuration list for PBXProject "OpenCvDemos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B54A2094179ECBB8004EE1E4 /* Debug */,
+				B54A2095179ECBB8004EE1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B54A2096179ECBB8004EE1E4 /* Build configuration list for PBXNativeTarget "OpenCvDemos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B54A2097179ECBB8004EE1E4 /* Debug */,
+				B54A2098179ECBB8004EE1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B54A206B179ECBB7004EE1E4 /* Project object */;
+}
