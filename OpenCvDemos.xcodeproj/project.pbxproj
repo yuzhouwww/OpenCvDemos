@@ -18,6 +18,7 @@
 		B54A208D179ECBB8004EE1E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B54A208C179ECBB8004EE1E4 /* Default-568h@2x.png */; };
 		B54A2090179ECBB8004EE1E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A208F179ECBB8004EE1E4 /* ViewController.m */; };
 		B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54A2091179ECBB8004EE1E4 /* ViewController.xib */; };
+		B54A209A179ECBED004EE1E4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A2099179ECBED004EE1E4 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B54A208E179ECBB8004EE1E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B54A208F179ECBB8004EE1E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B54A2092179ECBB8004EE1E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		B54A2099179ECBED004EE1E4 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "../../Users/yuzhou/Desktop/第三方库/opencv2.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54A209A179ECBED004EE1E4 /* opencv2.framework in Frameworks */,
 				B54A2077179ECBB8004EE1E4 /* UIKit.framework in Frameworks */,
 				B54A2079179ECBB8004EE1E4 /* Foundation.framework in Frameworks */,
 				B54A207B179ECBB8004EE1E4 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		B54A206A179ECBB7004EE1E4 = {
 			isa = PBXGroup;
 			children = (
+				B54A2099179ECBED004EE1E4 /* opencv2.framework */,
 				B54A207C179ECBB8004EE1E4 /* OpenCvDemos */,
 				B54A2075179ECBB8004EE1E4 /* Frameworks */,
 				B54A2074179ECBB8004EE1E4 /* Products */,
@@ -258,6 +262,10 @@
 		B54A2097179ECBB8004EE1E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Users/yuzhou/Desktop/第三方库\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCvDemos/OpenCvDemos-Prefix.pch";
 				INFOPLIST_FILE = "OpenCvDemos/OpenCvDemos-Info.plist";
@@ -269,6 +277,10 @@
 		B54A2098179ECBB8004EE1E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Users/yuzhou/Desktop/第三方库\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCvDemos/OpenCvDemos-Prefix.pch";
 				INFOPLIST_FILE = "OpenCvDemos/OpenCvDemos-Info.plist";
