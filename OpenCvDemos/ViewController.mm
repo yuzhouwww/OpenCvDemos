@@ -37,11 +37,12 @@
     
     std::vector<cv::KeyPoint> keypoints;
     
-    cv::Mat descriptors = cv::Mat::Mat();
+    cv::Mat descriptors = cv::Mat();
     
     NSDate *date = [NSDate date];
     
     detector->detect(target, keypoints);
+    extractor->compute(target, keypoints, descriptors);
     
     NSLog(@"%f",[[NSDate date] timeIntervalSinceDate:date]);
     
