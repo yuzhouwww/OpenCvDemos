@@ -29,6 +29,28 @@
     cv::cvtColor(inputMat, outputMat, CV_BGR2GRAY);
     UIImage *outputImg = [self UIImageFromCVMat:outputMat];
     imageView.image = outputImg;
+    
+    cv::Mat target = [self cvMatFromUIImage:originImg];//cv::imread("rock.jpg",CV_LOAD_IMAGE_COLOR);
+    
+    cv::Ptr<cv::FeatureDetector> detector = cv::FeatureDetector::create("ORB");
+    cv::Ptr<cv::DescriptorExtractor> extractor = cv::DescriptorExtractor::create("ORB");
+    
+    std::vector<cv::KeyPoint> keypoints;
+    
+    cv::Mat descriptors = cv::Mat::Mat();
+    
+    NSDate *date = [NSDate date];
+    
+    detector->detect(target, keypoints);
+    
+    NSLog(@"%f",[[NSDate date] timeIntervalSinceDate:date]);
+    
+    for (int i=0;i<keypoints.size();i++) {
+        cv::KeyPoint point = keypoints[i];
+        cv::circle(target, point.pt, 5, cv::Scalar(0, 255, 0));
+    }
+    UIImage *finalImg = [self UIImageFromCVMat:target];
+    imageView.image = finalImg;
 }
 
 - (void)didReceiveMemoryWarning
