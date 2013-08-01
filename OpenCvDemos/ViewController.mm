@@ -5,6 +5,8 @@
 //  Created by yuzhou on 13-7-23.
 //  Copyright (c) 2013年 wzyk. All rights reserved.
 //
+using namespace std;
+using namespace cv;
 
 #import "ViewController.h"
 
@@ -17,27 +19,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-//    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!" message:@"Welcome to OpenCV" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//    [alert show];
-//    [alert release];
+}
+
+- (void)detect
+{
+    [super viewDidLoad];
     
+    //灰度图
     UIImage *originImg = [UIImage imageNamed:@"rock.jpg"];
     NSLog(@"%@",originImg);
-    cv::Mat inputMat = [self cvMatFromUIImage:originImg];
-    cv::Mat outputMat;
-    cv::cvtColor(inputMat, outputMat, CV_BGR2GRAY);
+    Mat inputMat = [self cvMatFromUIImage:originImg];
+    Mat outputMat;
+    cvtColor(inputMat, outputMat, CV_BGR2GRAY);
     UIImage *outputImg = [self UIImageFromCVMat:outputMat];
     imageView.image = outputImg;
     
-    cv::Mat target = [self cvMatFromUIImage:originImg];//cv::imread("rock.jpg",CV_LOAD_IMAGE_COLOR);
+    //监测特征点
+    Mat target = [self cvMatFromUIImage:originImg];//imread("rock.jpg",CV_LOAD_IMAGE_COLOR);
     
-    cv::Ptr<cv::FeatureDetector> detector = cv::FeatureDetector::create("ORB");
-    cv::Ptr<cv::DescriptorExtractor> extractor = cv::DescriptorExtractor::create("ORB");
+    Ptr<FeatureDetector> detector = FeatureDetector::create("ORB");
+    Ptr<DescriptorExtractor> extractor = DescriptorExtractor::create("ORB");
     
-    std::vector<cv::KeyPoint> keypoints;
+    vector<KeyPoint> keypoints;
     
-    cv::Mat descriptors = cv::Mat();
+    Mat descriptors = Mat();
     
     NSDate *date = [NSDate date];
     
@@ -47,11 +52,51 @@
     NSLog(@"%f",[[NSDate date] timeIntervalSinceDate:date]);
     
     for (int i=0;i<keypoints.size();i++) {
-        cv::KeyPoint point = keypoints[i];
-        cv::circle(target, point.pt, 5, cv::Scalar(0, 255, 0));
+        KeyPoint point = keypoints[i];
+        circle(target, point.pt, 5, Scalar(0, 255, 0));
     }
     UIImage *finalImg = [self UIImageFromCVMat:target];
     imageView.image = finalImg;
+}
+
+int *detectWithFlann(int image0[], int width0, int height0, int image[], int width, int height)
+{
+    Mat img0 = Mat(height0, width0, CV_8UC4, (unsigned char*) image0);
+    
+    Mat img(height, width, CV_8UC4, (unsigned char*) image);
+    
+    Ptr<flann::IndexParams> indexParams = new flann::KDTreeIndexParams();
+    Ptr<flann::SearchParams> searchParams = new flann::SearchParams();
+    
+    indexParams->setAlgorithm(cvflann::FLANN_INDEX_LSH);
+    indexParams->setInt("table_number",6);
+    indexParams->setInt("key_size",12);
+    indexParams->setInt("multi_probe_level",1);
+    searchParams->setAlgorithm(cvflann::FLANN_INDEX_LSH);
+    
+    FlannBasedMatcher matcher(indexParams, searchParams);
+    OrbFeatureDetector detector(1000);
+    OrbDescriptorExtractor extractor(1000);
+    vector<KeyPoint> keyPoints0;
+    Mat descriptor0;
+    detector.detect(img0, keyPoints0, descriptor0);
+    extractor.compute(img0, keyPoints0, descriptor0);
+    vector<vector<DMatch> > matches;
+    vector<Mat> descriptors;
+    descriptors.push_back(descriptor0);
+    matcher.add(descriptors);
+    vector<KeyPoint> keyPoints;
+    Mat descriptor;
+    detector.detect(img, keyPoints, descriptor);
+    extractor.compute(img, keyPoints, descriptor);
+    matcher.knnMatch(descriptor, matches, 2);
+    int size = width * height;
+    int result[size];
+    memccpy(result, image, 0, size);
+    free(image);
+//    env->SetIntArrayRegion(result, 0, size, cbuf);
+//    env->ReleaseIntArrayElements(image, cbuf, 0);
+    return result;//返回格式不对？？？
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,13 +105,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (cv::Mat)cvMatFromUIImage:(UIImage *)image
+- (Mat)cvMatFromUIImage:(UIImage *)image
 {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
     CGFloat cols = image.size.width;
     CGFloat rows = image.size.height;
     
-    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
+    Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
     
     CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to  data
                                                     cols,                       // Width of bitmap
@@ -84,13 +129,13 @@
     return cvMat;
 }
 
-- (cv::Mat)cvMatGrayFromUIImage:(UIImage *)image
+- (Mat)cvMatGrayFromUIImage:(UIImage *)image
 {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
     CGFloat cols = image.size.width;
     CGFloat rows = image.size.height;
     
-    cv::Mat cvMat(rows, cols, CV_8UC1); // 8 bits per component, 1 channels
+    Mat cvMat(rows, cols, CV_8UC1); // 8 bits per component, 1 channels
     
     CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to data
                                                     cols,                       // Width of bitmap
@@ -108,7 +153,7 @@
     return cvMat;
 }
 
--(UIImage *)UIImageFromCVMat:(cv::Mat)cvMat
+-(UIImage *)UIImageFromCVMat:(Mat)cvMat
 {
     NSData *data = [NSData dataWithBytes:cvMat.data length:cvMat.elemSize()*cvMat.total()];
     CGColorSpaceRef colorSpace;
@@ -121,7 +166,7 @@
     
     CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)data);
     
-    // Creating CGImage from cv::Mat
+    // Creating CGImage from Mat
     CGImageRef imageRef = CGImageCreate(cvMat.cols,                                 //width
                                         cvMat.rows,                                 //height
                                         8,                                          //bits per component
