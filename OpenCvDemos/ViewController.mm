@@ -9,6 +9,7 @@ using namespace std;
 using namespace cv;
 
 #import "ViewController.h"
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface ViewController ()
 
@@ -16,9 +17,17 @@ using namespace cv;
 
 @implementation ViewController
 
+//void detectWithFlann(Mat img0, int width0, int height0, Mat img, int width, int height);
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    Mat img0 = [self cvMatFromUIImage:[UIImage imageNamed:@"rock.jpg"]];
+    Mat img = [self cvMatFromUIImage:[UIImage imageNamed:@"rock_part.jpg"]];
+    for (int i = 0; i < 20; i++) {
+        detectWithFlann(img, 398, 589, img0, 135, 84);
+    }
 }
 
 - (void)detect
@@ -59,11 +68,9 @@ using namespace cv;
     imageView.image = finalImg;
 }
 
-int *detectWithFlann(int image0[], int width0, int height0, int image[], int width, int height)
+void detectWithFlann(Mat img0, int width0, int height0, Mat img, int width, int height)
 {
-    Mat img0 = Mat(height0, width0, CV_8UC4, (unsigned char*) image0);
-    
-    Mat img(height, width, CV_8UC4, (unsigned char*) image);
+    NSDate *date = [NSDate date];
     
     Ptr<flann::IndexParams> indexParams = new flann::KDTreeIndexParams();
     Ptr<flann::SearchParams> searchParams = new flann::SearchParams();
@@ -90,13 +97,14 @@ int *detectWithFlann(int image0[], int width0, int height0, int image[], int wid
     detector.detect(img, keyPoints, descriptor);
     extractor.compute(img, keyPoints, descriptor);
     matcher.knnMatch(descriptor, matches, 2);
-    int size = width * height;
-    int result[size];
-    memccpy(result, image, 0, size);
-    free(image);
-//    env->SetIntArrayRegion(result, 0, size, cbuf);
-//    env->ReleaseIntArrayElements(image, cbuf, 0);
-    return result;//返回格式不对？？？
+//    int size = width * height;
+//    int result[size];
+//    memccpy(result, image, 0, size);  //    env->SetIntArrayRegion(result, 0, size, cbuf);
+//    free(image);                      //    env->ReleaseIntArrayElements(image, cbuf, 0);
+
+//    return result;//返回格式不对？？？
+    
+    NSLog(@"%.0f mm",[[NSDate date] timeIntervalSinceDate:date] * 1000);
 }
 
 - (void)didReceiveMemoryWarning
