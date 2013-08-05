@@ -23,10 +23,10 @@ using namespace cv;
 {
     [super viewDidLoad];
     
-    Mat img0 = [self cvMatFromUIImage:[UIImage imageNamed:@"rock.jpg"]];
-    Mat img = [self cvMatFromUIImage:[UIImage imageNamed:@"rock_part.jpg"]];
+    Mat img0 = [self cvMatFromUIImage:[UIImage imageNamed:@"f1.jpg"]];
+    Mat img = [self cvMatFromUIImage:[UIImage imageNamed:@"f13.jpg"]];
     for (int i = 0; i < 20; i++) {
-        detectWithFlann(img, 398, 589, img0, 135, 84);
+        detectWithFlann(img, 398, 589, img0, 500, 667);
     }
 }
 
@@ -101,10 +101,9 @@ void detectWithFlann(Mat img0, int width0, int height0, Mat img, int width, int 
 //    int result[size];
 //    memccpy(result, image, 0, size);  //    env->SetIntArrayRegion(result, 0, size, cbuf);
 //    free(image);                      //    env->ReleaseIntArrayElements(image, cbuf, 0);
-
 //    return result;//返回格式不对？？？
     
-    NSLog(@"%.0f mm",[[NSDate date] timeIntervalSinceDate:date] * 1000);
+    NSLog(@"%.0f ms",[[NSDate date] timeIntervalSinceDate:date] * 1000);
 }
 
 - (void)didReceiveMemoryWarning

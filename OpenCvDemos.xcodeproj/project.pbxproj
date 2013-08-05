@@ -19,8 +19,8 @@
 		B54A2090179ECBB8004EE1E4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B54A208F179ECBB8004EE1E4 /* ViewController.mm */; };
 		B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54A2091179ECBB8004EE1E4 /* ViewController.xib */; };
 		B54A209A179ECBED004EE1E4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54A2099179ECBED004EE1E4 /* opencv2.framework */; };
-		B54A209C179EDBCE004EE1E4 /* rock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B54A209B179EDBCE004EE1E4 /* rock.jpg */; };
-		B5DD020017AFCBA500C105DF /* rock_part.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5DD01FF17AFCBA500C105DF /* rock_part.jpg */; };
+		B5DD020517AFEAFE00C105DF /* f1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5DD020317AFEAFE00C105DF /* f1.jpg */; };
+		B5DD020617AFEAFE00C105DF /* f13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5DD020417AFEAFE00C105DF /* f13.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,8 @@
 		B54A208F179ECBB8004EE1E4 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B54A2092179ECBB8004EE1E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		B54A2099179ECBED004EE1E4 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "../../Users/yuzhou/Desktop/第三方库/opencv2.framework"; sourceTree = "<group>"; };
-		B54A209B179EDBCE004EE1E4 /* rock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpg; sourceTree = "<group>"; };
-		B5DD01FF17AFCBA500C105DF /* rock_part.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock_part.jpg; sourceTree = "<group>"; };
+		B5DD020317AFEAFE00C105DF /* f1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = f1.jpg; sourceTree = "<group>"; };
+		B5DD020417AFEAFE00C105DF /* f13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = f13.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +96,8 @@
 				B54A208E179ECBB8004EE1E4 /* ViewController.h */,
 				B54A208F179ECBB8004EE1E4 /* ViewController.mm */,
 				B54A2091179ECBB8004EE1E4 /* ViewController.xib */,
-				B54A209B179EDBCE004EE1E4 /* rock.jpg */,
-				B5DD01FF17AFCBA500C105DF /* rock_part.jpg */,
+				B5DD020317AFEAFE00C105DF /* f1.jpg */,
+				B5DD020417AFEAFE00C105DF /* f13.jpg */,
 				B54A207D179ECBB8004EE1E4 /* Supporting Files */,
 			);
 			path = OpenCvDemos;
@@ -173,8 +173,8 @@
 				B54A208B179ECBB8004EE1E4 /* Default@2x.png in Resources */,
 				B54A208D179ECBB8004EE1E4 /* Default-568h@2x.png in Resources */,
 				B54A2093179ECBB8004EE1E4 /* ViewController.xib in Resources */,
-				B54A209C179EDBCE004EE1E4 /* rock.jpg in Resources */,
-				B5DD020017AFCBA500C105DF /* rock_part.jpg in Resources */,
+				B5DD020517AFEAFE00C105DF /* f1.jpg in Resources */,
+				B5DD020617AFEAFE00C105DF /* f13.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
